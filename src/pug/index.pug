@@ -1,0 +1,196 @@
+extends _layout
+
+block vars
+  - var pageTitle = "Home page";
+  - var pageClass = "";
+  - var pageActive = "homepage";
+block content
+  //
+    .b-lazy.webp-img(data-webp="./img/motivated-bg.webp"
+      data-webp-mobile="./img/motivated-bg-mobile.webp"
+      data-img="./img/motivated-bg.png"
+      data-img-mobile="./img/motivated-bg-mobile.png")
+
+    picture
+      source(srcset="./img/logo.webp" type="image/webp")
+      img(src="./img/logo.png" alt="img")
+
+  div.main-wrap
+    .top
+      .top__inner
+        .top__special
+          a(href="#").top__special-i
+            include ../img/ico/special-ico.svg
+            .top__special-txt  специальный <br> онлайн-курс
+        .top__subtitle Каббала: Как все устроено
+        .top__title на самом деле?
+        .top__hexagon(style="background-image: url(./img/hexagon-bg.svg);")
+          a(href="javascript:void(0);").top__btn-down
+            include ../img/ico/arrow-down.svg
+          .top__hexagon-txt Единственный онлайн-курс по каббале, пошагово формирующий понимание основных законов мироздания и причин всего происходящего в мире для управления судьбой и своей повседневной жизнью
+    .online-lesson
+      .online-lesson__inner
+        .online-lesson__img
+          picture
+            source(srcset="./img/online-lesson-img.webp" type="image/webp")
+            img(src="./img/online-lesson-img.png" alt="img" width="145")
+        .online-lesson__info
+          .online-lesson__caption
+            include ../img/ico/arrow-down.svg
+            | Первый онлайн-урок
+          .online-lesson__title Коронавирус это заговор, <br> случайность или замысел Природы?
+          .online-lesson__time
+            .online-lesson__time-date 11 августа
+            .online-lesson__time-day вторник
+            .online-lesson__time-hour 19:30
+          .online-lesson__btn
+            a(href="#").online-lesson__btn-i Мне интересно!
+    .questions
+      .questions__inner
+        .questions__title Этот курс для Вас если ...
+        .questions__content
+          .questions__img
+          .questions__lists
+            .questions__list
+              .questions__list-title Вы задаете вопросы:
+              .questions__item Кто я? Откуда пришел и куда иду?
+              .questions__item В чем смысл жизни, в чём моё предназначение?
+              .questions__item Что на самом деле скрывают тайны каббалы?
+              .questions__item Как понять и ощутить, что такое вечная душа и что будет после смерти?
+            .questions__list
+              .questions__list-title Вам интересно:
+              .questions__item Узнать причины всего происходящего в мире
+              .questions__item Понять к какой цели природа ведет человечество
+              .questions__item Самому раскрыть законы мироздания, о которых говорит наука каббала
+              .questions__item Видеть тенденции и духовные первопричины всех событий.
+            .questions__list
+              .questions__list-title Вы хотите:
+              .questions__item Научиться правильно решать любые проблемы в условия современного мира и стать успешным
+              .questions__item Найти свое место в сегодняшнем мире и обществе
+              .questions__item Начать свободно дышать, освободившись от тревог
+              .questions__item Начинать каждый новый день в радости!
+    .quote
+      .quote__inner
+        .quote__img
+          picture
+            source(srcset="./img/quote-img.webp" type="image/webp")
+            img(src="./img/quote-img.png" alt="img" width="145")
+        .quote__info
+          .quote__txt “Занимаясь каббалой, человек начинает жить по-настоящему. <br> Для него каждый день - новый. Он все время раскрывает новые законы, взаимосвязи, раскрывает новый мир в себе и вокруг себя”.
+          .quote__capt Михаэль Лайтман, основатель и глава Международной академии каббалы
+    .about
+      .about__inner
+        .about__title
+          span Что такое
+          | КАББАЛА?
+        .about__list.custom-row
+          .about__item.custom-col.about__item--empty
+          .about__item.custom-col
+            .about__item-content
+              .about__item-img
+                include ../img/ico/about-ico01.svg
+              .about__item-txt.
+                Сокровищницы высшей мудрости открывались лишь для немногих. Но сегодня мудрость каббалы становится достоянием всего мира
+          .about__item.custom-col
+            .about__item-content
+              .about__item-img
+                include ../img/ico/about-ico02.svg
+              .about__item-txt.
+                Каббала - это древняя наука, существующая уже почти 6 тысяч лет. Знание этих законов и соответствие им дает человеку ключ от его судьбы
+          .about__item.custom-col
+            .about__item-content
+              .about__item-img
+                include ../img/ico/about-ico03.svg
+              .about__item-txt.
+                Каббала исследует высшую духовную реальность так же, как естественные науки исследуют реальность нашего мира, выявляя универсальные принципы и законы мироздания
+          .about__item.custom-col
+            .about__item-content
+              .about__item-img
+                include ../img/ico/about-ico04.svg
+              .about__item-txt.
+                Многие тысячи лет эта наука была скрыта от масс, знание передавалось от учителя к ученику в течение многих поколений
+        .about__get
+          .about__get-title Что Вы получаете по окончанию курса:
+          .about__get-list.custom-row
+            .about__get-item.custom-col
+              .about__get-img
+                picture
+                  source(srcset="./img/about-get-ico01.webp" type="image/webp")
+                  img(src="./img/about-get-ico01.png" alt="img" width="50")
+              .about__get-txt Инструменты управления своей судьбой
+            .about__get-item.custom-col
+              .about__get-img
+                picture
+                  source(srcset="./img/about-get-ico02.webp" type="image/webp")
+                  img(src="./img/about-get-ico03.png" alt="img" width="50")
+              .about__get-txt Понимание фундаментальных законов мироздания
+            .about__get-item.custom-col
+              .about__get-img
+                picture
+                  source(srcset="./img/about-get-ico03.webp" type="image/webp")
+                  img(src="./img/about-get-ico03.png" alt="img" width="50")
+              .about__get-txt Знания о смысле и цели существования
+            .about__get-item.custom-col
+              .about__get-img
+                picture
+                  source(srcset="./img/about-get-ico04.webp" type="image/webp")
+                  img(src="./img/about-get-ico04.png" alt="img" width="50")
+              .about__get-txt Эффективный механизм принятия решений
+            .about__get-item.custom-col
+              .about__get-img
+                picture
+                  source(srcset="./img/about-get-ico05.webp" type="image/webp")
+                  img(src="./img/about-get-ico06.png" alt="img" width="50")
+              .about__get-txt Понимание сути и тенденций происходящих в мире событий
+            .about__get-item.custom-col
+              .about__get-img
+                picture
+                  source(srcset="./img/about-get-ico06.webp" type="image/webp")
+                  img(src="./img/about-get-ico06.png" alt="img" width="50")
+              .about__get-txt Инструменты для преодоления жизненных трудностей в современном мире
+            .about__get-item.custom-col
+              .about__get-img
+                picture
+                  source(srcset="./img/about-get-ico07.webp" type="image/webp")
+                  img(src="./img/about-get-ico07.png" alt="img" width="50")
+              .about__get-txt ЭВыход за рамки ограничений, страхов, стереотипов
+            .about__get-item.custom-col
+              .about__get-img
+                picture
+                  source(srcset="./img/about-get-ico08.webp" type="image/webp")
+                  img(src="./img/about-get-ico08.png" alt="img" width="50")
+              .about__get-txt Глубокое понимание человеческой природы
+          .about__get-img
+            .about__get-img-vector(style="background-image: url('./img/runik-vector.svg');")
+            picture
+              source(srcset="./img/tree-img.webp" type="image/webp")
+              img(src="./img/tree-img.png" alt="img")
+    .join-now
+      .join-now__inner
+        .join-now__img
+          picture
+            source(srcset="./img/join-now-img.webp" type="image/webp")
+            img(src="./img/join-now-img.png" alt="img" width="125")
+        .join-now__info
+          .join-now__caption
+            include ../img/ico/arrow-down.svg
+            | Первый онлайн-урок
+          .join-now__title ЗАПИСАТЬСЯ НА КУРС сейчас:
+          .join-now__time
+            .join-now__time-first Первый урок:
+            .join-now__time-date 11 августа
+            .join-now__time-day вторник
+            .join-now__time-hour 19:30
+          .join-now__btn
+            a(href="#").online-lesson__btn-i Мне интересно!
+    .teachers
+      .teachers__inner
+        .teachers__content
+          .teachers__title Курс ведут лучшие <br> преподаватели Международной <br> академии каббалы:
+          .teachers__item
+            .teachers__img
+            .teachers__info
+              .teachers__name
+              .teachers__txt
+
+
