@@ -17,19 +17,26 @@ block content
 
   div.main-wrap
     .top
-      .top__inner
+      .top__big-img.b-lazy.webp-img(data-webp="./img/kolaj.webp"
+      data-webp-mobile="./img/kolaj.webp"
+      data-img="./img/kolaj.png"
+      data-img-mobile="./img/kolaj.png")
+        //picture
+        //  source(srcset="./img/kolaj.webp" type="image/webp")
+        //  img(src="./img/kolaj.png" alt="img" height="940")
+      .top__inner.site-container
         .top__special
           a(href="#").top__special-i
             include ../img/ico/special-ico.svg
             .top__special-txt  специальный <br> онлайн-курс
         .top__subtitle Каббала: Как все устроено
         .top__title на самом деле?
-        .top__hexagon(style="background-image: url(./img/hexagon-bg.svg);")
+        .top__hexagon
           a(href="javascript:void(0);").top__btn-down
             include ../img/ico/arrow-down.svg
           .top__hexagon-txt Единственный онлайн-курс по каббале, пошагово формирующий понимание основных законов мироздания и причин всего происходящего в мире для управления судьбой и своей повседневной жизнью
     .online-lesson
-      .online-lesson__inner
+      .online-lesson__inner.site-container
         .online-lesson__img
           picture
             source(srcset="./img/online-lesson-img.webp" type="image/webp")
@@ -44,9 +51,12 @@ block content
             .online-lesson__time-day вторник
             .online-lesson__time-hour 19:30
           .online-lesson__btn
-            a(href="#").online-lesson__btn-i Мне интересно!
-    .questions
-      .questions__inner
+            a(href="#").online-lesson__btn-i.site-btn Мне интересно!
+    .questions.b-lazy.webp-img(data-webp="./img/questions-bg.webp"
+      data-webp-mobile="./img/gradient-bg02.svg"
+      data-img="./img/questions-bg.jpg"
+      data-img-mobile="./img/gradient-bg02.svg")
+      .questions__inner.site-container
         .questions__title Этот курс для Вас если ...
         .questions__content
           .questions__img
@@ -70,7 +80,7 @@ block content
               .questions__item Начать свободно дышать, освободившись от тревог
               .questions__item Начинать каждый новый день в радости!
     .quote
-      .quote__inner
+      .quote__inner.site-container
         .quote__img
           picture
             source(srcset="./img/quote-img.webp" type="image/webp")
@@ -78,9 +88,12 @@ block content
         .quote__info
           .quote__txt “Занимаясь каббалой, человек начинает жить по-настоящему. <br> Для него каждый день - новый. Он все время раскрывает новые законы, взаимосвязи, раскрывает новый мир в себе и вокруг себя”.
           .quote__capt Михаэль Лайтман, основатель и глава Международной академии каббалы
-    .about
-      .about__inner
-        .about__title
+    .about.b-lazy.webp-img(data-webp="./img/about-bg.webp"
+      data-webp-mobile="./img/gradient-bg02.svg"
+      data-img="./img/about-bg.jpg"
+      data-img-mobile="./img/gradient-bg02.svg")
+      .about__inner.site-container
+        .about__title.site-title
           span Что такое
           | КАББАЛА?
         .about__list.custom-row
@@ -162,11 +175,9 @@ block content
               .about__get-txt Глубокое понимание человеческой природы
           .about__get-img
             .about__get-img-vector(style="background-image: url('./img/runik-vector.svg');")
-            picture
-              source(srcset="./img/tree-img.webp" type="image/webp")
-              img(src="./img/tree-img.png" alt="img")
+
     .join-now
-      .join-now__inner
+      .join-now__inner.site-container
         .join-now__img
           picture
             source(srcset="./img/join-now-img.webp" type="image/webp")
@@ -182,15 +193,255 @@ block content
             .join-now__time-day вторник
             .join-now__time-hour 19:30
           .join-now__btn
-            a(href="#").online-lesson__btn-i Мне интересно!
+            a(href="#").online-lesson__btn-i.site-btn.site-btn--white Мне интересно!
     .teachers
-      .teachers__inner
+      .teachers__inner.site-container
         .teachers__content
           .teachers__title Курс ведут лучшие <br> преподаватели Международной <br> академии каббалы:
-          .teachers__item
-            .teachers__img
-            .teachers__info
-              .teachers__name
-              .teachers__txt
+          .teachers__list
+            .teachers__item
+              .teachers__img
+                picture
+                  source(srcset="./img/teachers-img01.webp" type="image/webp")
+                  img(src="./img/teachers-img01.png" alt="img" width="145")
+              .teachers__info
+                .teachers__name Александр Козлов
+                .teachers__txt.
+                  Выпускник МВТУ им. Баумана. В прошлом главный инженер крупного промышленного объединения, кандидат экономических наук, бывший депутат, первый заместитель префекта Москвы, капитан сборной ветеранов Москвы и России по хоккею, а последние 15 лет - израильтянин.
+                  <br><br>
+                  Изучает каббалу с 2002 года. Ведущий преподаватель Международной академии каббалы, методист, редактор, политический и экономический обозреватель.
+            .teachers__item
+              .teachers__img
+                picture
+                  source(srcset="./img/teachers-img02.webp" type="image/webp")
+                  img(src="./img/teachers-img02.png" alt="img" width="145")
+              .teachers__info
+                .teachers__name Борис Белоцерковский
+                .teachers__txt.
+                  Ведущий преподаватель Международной академии каббалы. Родился в Ташкенте. Проживает в Израиле с 1991 года. Окончил Технологический колледж в Беер-Шеве по специальности электрооптика и Хайфский университет - вторая степень по социальному лидерству.
+                  <br><br>
+                  Начал заниматься каббалой в 1999 году. В настоящее время руководитель Международной академии каббалы на русском языке. Преподает каббалу в Израиле и десятках стран мира.  По опросам студентов является лучшим преподавателем МАК на русском языке.
+            .teachers__item
+              .teachers__img
+                picture
+                  source(srcset="./img/teachers-img03.webp" type="image/webp")
+                  img(src="./img/teachers-img03.png" alt="img" width="145")
+              .teachers__info
+                .teachers__name Глеб Богатский
+                .teachers__txt.
+                  Начал заниматься каббалой в 1999 году. В настоящее время руководитель Международной академии каббалы на русском языке. Преподает каббалу в Израиле и десятках стран мира. По опросам студентов является лучшим преподавателем МАК на русском языке.
 
+    .course-program
+      .course-program__inner.site-container
+        .course-program__title.site-title
+          span как все устроено
+          | НА САМОМ ДЕЛЕ?
+        .course-program__side
+          .course-program__side-list-title Программа курса
+          .course-program__side-list
+            .course-program__side-item 5 интерактивных онлайн уроков
+            .course-program__side-item Личный куратор курса
+            .course-program__side-item Закрытая вотсап группа для участников курса
+            .course-program__side-item Ответы на все ваши вопросы от лучших преподавателей Международной академии каббалы
+            .course-program__side-item Техническая поддержка - быстрая помощь по любому тех. вопросу
+            .course-program__side-item Запись всех уроков
+            .course-program__side-item Дополнительные материалы для самостоятельного углубленного изучения по вашему желанию
+        .course-program__list
+          .course-program__item
+            .course-program__item-content
+              .course-program__img
+                picture
+                  source(srcset="./img/course-program01.webp" type="image/webp")
+                  img(src="./img/course-program01.png" alt="img" width="90")
+              .course-program__info
+                .course-program__title Коронавирус это заговор, случайность или замысел Природы? Куда нас ведут?
+                .course-program__txt.
+                  Чем занимается наука каббала? Откуда каббалисты знают о замысле Творения? Из каких двух сил состоит все мироздание? Зачем нужен наш мир?
+          .course-program__item
+            .course-program__item-content
+              .course-program__img
+                picture
+                  source(srcset="./img/course-program02.webp" type="image/webp")
+                  img(src="./img/course-program02.png" alt="img" width="90")
+              .course-program__info
+                .course-program__title Что общего между мировым кризисом сегодня и кризисом Вавилонской империи?
+                .course-program__txt.
+                  Авраам и Нимрод - два выхода из кризиса. Какое решение предложил Авраам в Вавилоне и почему сегодня оно даже более актуально? Причины раскрытия науки каббала в наши дни. Как работает методика каббалы для решения любых проблем?
+          .course-program__item
+            .course-program__item-content
+              .course-program__img
+                picture
+                  source(srcset="./img/course-program03.webp" type="image/webp")
+                  img(src="./img/course-program03.png" alt="img" width="90")
+              .course-program__info
+                .course-program__title Есть ли действительно какая-то миссия у народа Израиля?
+                .course-program__txt.
+                  История каббалы, человечества и как все это связано с народом Израиля? Скрытые причины антисемитизма. Антисемитизм - закон природы?!
+          .course-program__item
+            .course-program__item-content
+              .course-program__img
+                picture
+                  source(srcset="./img/course-program04.webp" type="image/webp")
+                  img(src="./img/course-program04.png" alt="img" width="90")
+              .course-program__info
+                .course-program__title Почему все выходит из под контроля? Экология, эпидемии, экономика, террор, социальные протесты...
+                .course-program__txt.
+                  Почему попытки правительств, организаций, ученых изменить что-либо не работают? Есть ли у человечества и каждого из нас свобода выбора? Если да, то в чем?
+          .course-program__item
+            .course-program__item-content
+              .course-program__img
+                picture
+                  source(srcset="./img/course-program05.webp" type="image/webp")
+                  img(src="./img/course-program05.png" alt="img" width="90")
+              .course-program__info
+                .course-program__title Мир меняется с огромной скоростью. Есть ли путь назад или нам нужно подстраиваться под новые условия?
+                .course-program__txt.
+                  Какие специальности будут востребованы? Что будет с безработными? Как изменится экономика, развлечения, туризм, образование? Как найти свое место в новом мире и быть успешным, счастливым человеком?
+        .course-program__btn
+          a(href="#").course-program__btn-i.site-btn Мне интересно!
+
+    .say
+      .say__inner.site-container
+        .say__title.site-title
+          span о нас
+          | ГОВОРЯТ
+        .say__content
+          .say__video
+            iframe(style="width:100%; max-width: 560px; height: 315px;" src="https://www.youtube.com/embed/i6Q40TDujgE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="")
+          .say__review
+            .say__review-title Отзывы участников
+            .say__review-txt.
+              Обучение под руководством лучших преподавателей Международной Академии Курс формирует понимание основных законов мироздания для  управления судьбой и своей повседневной жизнью
+      .say__slider.say-slider-js
+        .say__item
+          .say__item-img
+            picture
+              source(srcset="./img/o1.webp" type="image/webp")
+              img(src="./img/o1.png" alt="img" width="112")
+          .say__item-info
+            .say__item-name Наташа
+            .say__item-txt.
+              Никогда не знаешь, что с тобой произойдет в следующий момент. Однажды, в интернете, я увидела рекламу курса по каббале. Что я знала о каббале? Что это крутая мистика, красные нитки и прочее! И вот я на уроке в Тель-Авиве. Собралось много народу. Лектор начал говорить и что-то особенное появилось в воздухе, как облако, которое окутало меня до конца урока. Чем больше он говорил, тем больше возникало вопросов. С тех пор нахожу ответы на свои вопросы в этой науке…
+        .say__item
+          .say__item-img
+            picture
+              source(srcset="./img/o2.webp" type="image/webp")
+              img(src="./img/o2.png" alt="img" width="112")
+          .say__item-info
+            .say__item-name Заза
+            .say__item-txt.
+              2014 год. Во время операции пришло осознание, что наш физический мир не истинный, а только декорации. Потом несколько лет поиска ответа на вопрос. И вот когда ты просто ждешь, когда на этот чистый лист начнут ложиться буквы, появляется человек, который дает ссылку на интервью с каббалистом Михаэлем Лайтманом. Щелчок…, замыкание…, и вот я дома))) Мне повезло, я отправился учиться сразу на курс Международной академии каббалы в Хайфе.
+        .say__item
+          .say__item-img
+            picture
+              source(srcset="./img/o3.webp" type="image/webp")
+              img(src="./img/o3.png" alt="img" width="112")
+          .say__item-info
+            .say__item-name Жанна
+            .say__item-txt.
+              Попала на первый урок курса случайно. Ничего от него не ждала. Но спустя полтора часа я поняла, что эта древняя наука может изменить мою жизнь. Теперь я точно знаю, кем я хочу быть и что мне нужно делать, чтобы стать счастливой. Постоянно открываю что-то новое про себя и мир вокруг.
+          .say__item-img
+            picture
+              source(srcset="./img/o4.webp" type="image/webp")
+              img(src="./img/o5.png" alt="img" width="112")
+          .say__item-info
+            .say__item-name Сергей
+            .say__item-txt.
+              Меня давно интересовали вопросы мироздания и проявления этих процессов в нашей жизни, тема управления своей судьбой. Ответы я нашел в каббале.
+
+    .facts
+      .facts__inner.site-container
+        .facts__title
+          img(src="./img/logo-title.svg" alt="ico" width="224")
+          span Главные факты о нас:
+        .facts__list.facts-slider-js
+          .facts__item
+            .facts__txt.
+              Более 2 млн обучающихся в интернет-академии каббалы Михаэля Лайтмана.
+          .facts__item
+            .facts__txt.
+              Представительства Международной академии каббалы работают в 64 странах мира.
+          .facts__item
+            .facts__txt.
+              42000 часов видеообучения на 32 языках в крупнейшем в мире интернет-медиа архиве по каббале.
+          .facts__item
+            .facts__txt.
+              Сайт академии удостоен премии энциклопедии “Британика” за 2001 год.
+          .facts__item
+            .facts__txt.
+              255 учебных изданий, выпущенных в 24 странах мира.
+          .facts__item
+            .facts__txt.
+              Лекторы с международным стажем преподавания более 25 лет.
+    .founder
+      .founder__inner.site-container
+        .founder__img
+          picture
+            source(srcset="./img/quote-img.webp" type="image/webp")
+            img(src="./img/quote-img.png" alt="img" width="144")
+        .founder__content
+          .founder__name
+          .founder__rank.
+            Основатель и руководитель <br>Международной академии каббалы
+          .founder__list
+            .founder__item член Всемирного совета мудрости (World Wisdom Council)
+            .founder__item получил духовное наследие “из уст в уста” от величайшего каббалиста XX века Рабаша, ученика Бааль Сулама, автора Комментария Книги Зоар
+            .founder__item занимается и обучает науке каббала более 40 лет
+            .founder__item автор более 70 книг по каббале, переведенных на более 20 языков мира
+            .founder__item Doctor of Philosophy (философия PhD), биокибернетика MSc
+            .founder__item из уроков Михаэля Лайтмана создан крупнейший в мире бесплатный мультиязычный архив уроков по каббале
+    .last
+      .last__inner.site-container
+        .last__caption
+          include ../img/ico/arrow-down.svg
+        | Первый онлайн-урок
+        .last__title
+          span Каббала: Как все устроено
+        | на самом деле?
+        .last__discount
+          .last__discount-txt.
+           Скидка 30% для Вас- новых студентов Международной академии каббалы:
+          .last__discount-num
+            span 425
+              include ../img/ico/p.svg
+            span 897
+              include ../img/ico/p.svg
+        .last__bonus
+          .last__bonus-title
+          ol.last__bonus-list
+            li
+          .last__bonus-books
+            picture
+              source(srcset="./img/book1.webp" type="image/webp")
+              img(src="./img/book1.png" alt="img" width="96")
+            picture
+              source(srcset="./img/book2.webp" type="image/webp")
+              img(src="./img/book2.png" alt="img" width="96")
+        .last__form
+          .last__img
+            picture
+              source(srcset="./img/join-now-img.webp" type="image/webp")
+              img(src="./img/join-now-img.png" alt="img" width="125")
+          .last__info
+            .last__caption
+
+              | Первый онлайн-урок
+            .last__title
+              include ../img/ico/arrow-down.svg
+              | ЗАПИСАТЬСЯ НА КУРС сейчас:
+            .last__form-i
+              form
+                .last__form-col
+                  .last__form-input
+                    input(type="text" placeholder="Имя Фамилия" )
+                .last__form-col
+                  .last__form-input
+                    input(type="text" placeholder="Телефон" )
+                .last__form-btn
+                  a(href="#").last__form-btn-i.site-btn.site-btn--white Мне интересно!
+            .last__time
+              .last__time-first Первый урок:
+              .last__time-date 11 августа
+              .last__time-day вторник
+              .last__time-hour 19:30
 
