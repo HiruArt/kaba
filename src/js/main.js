@@ -40,32 +40,6 @@ $(document).ready(function () {
     src: 'data-blazy' // Default is data-src
   });
 
-
-  $('.menu-btn-js').click(function () {
-    $('.header').addClass('open-menu');
-    $('body').addClass('oh');
-  });
-
-  $('.menu-btn-close-js').click(function () {
-    $('.header').removeClass('open-menu');
-    $('body').removeClass('oh');
-  });
-
-
-  if($(document).width() < 992){
-    $('.nav__triangle').click(function (e) {
-      $(this).closest('.nav__item').toggleClass('open');
-    });
-  }
-  $(document).scroll(function () {
-    var top = $(document).scrollTop();
-    if (top < 1) {
-      $(".header").removeClass('scroll');
-    } else {
-      $(".header").addClass('scroll');
-    }
-  });
-
   // checking browser for WEBP
   hasWebP().then(function () {
 
@@ -102,46 +76,6 @@ $(document).ready(function () {
 
     bLazy.revalidate();
   });
-
-  $('.phone').inputmask("+7 (999) 999-99-99");
-
-
-  /*popups start*/
-  $(document).on('click', 'a[data-modal-class]', function (e) {
-    e.preventDefault();
-    var dataModalId = $(this).attr('data-modal-class');
-    $('.popup.' + dataModalId + '').addClass('open');
-    $('body').addClass('oh');
-    setTimeout(function () {
-      bLazy.revalidate();
-    },500)
-  });
-
-  $(document).on('click', '.popup__close', function (e) {
-    $('.popup ').removeClass('open');
-    $('body').removeClass('oh');
-  });
-
-  $(document).on('click', '.popup', function (e) {
-
-    if(e.target.classList[0] == "popup") {
-      $('.popup ').removeClass('open');
-      $('body').removeClass('oh');
-    }
-  });
-  /*popups end*/
-
-
-
-  // $(document).scroll(function () {
-  //   var top = $(document).scrollTop();
-  //   if (top < 1) {
-  //     $(".header").removeClass('scroll');
-  //   } else {
-  //     $(".header").addClass('scroll');
-  //   }
-  // });
-
 
   /*validation start*/
 
@@ -196,6 +130,19 @@ $(document).ready(function () {
     if($(this).closest('form').find('.error-field').length == 0 && $(this).closest('form').find('.correct').length > 0){
       $(this).closest('.site-form').addClass('submitted');
     }
+  });
+
+  $('.say-slider-js').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    infinite: true,
+    arrows: false,
+    speed: 500,
+    fade: true,
+    // vertical:true,
+    // verticalSwiping: true,
+    // adaptiveHeight: true,
   });
 
 });

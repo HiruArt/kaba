@@ -185,8 +185,7 @@ block content
         .join-now__info
           .join-now__caption
             include ../img/ico/arrow-down.svg
-            | Первый онлайн-урок
-          .join-now__title ЗАПИСАТЬСЯ НА КУРС сейчас:
+            | ЗАПИСАТЬСЯ НА КУРС сейчас:
           .join-now__time
             .join-now__time-first Первый урок:
             .join-now__time-date 11 августа
@@ -194,7 +193,10 @@ block content
             .join-now__time-hour 19:30
           .join-now__btn
             a(href="#").join-now__btn-i.site-btn.site-btn--white Мне интересно!
-    .teachers
+    .teachers.b-lazy.webp-img(data-webp="./img/teachers-bg.webp"
+      data-webp-mobile="./img/teachers-bg-mobile.svg"
+      data-img="./img/teachers-bg.jpg"
+      data-img-mobile="./img/teachers-bg-mobile.svg")
       .teachers__inner.site-container
         .teachers__content
           .teachers__title Курс ведут лучшие <br> преподаватели Международной <br> академии каббалы:
@@ -236,67 +238,69 @@ block content
         .course-program__title.site-title
           span как все устроено
           | НА САМОМ ДЕЛЕ?
-        .course-program__side
-          .course-program__side-list-title Программа курса
-          .course-program__side-list
-            .course-program__side-item 5 интерактивных онлайн уроков
-            .course-program__side-item Личный куратор курса
-            .course-program__side-item Закрытая вотсап группа для участников курса
-            .course-program__side-item Ответы на все ваши вопросы от лучших преподавателей Международной академии каббалы
-            .course-program__side-item Техническая поддержка - быстрая помощь по любому тех. вопросу
-            .course-program__side-item Запись всех уроков
-            .course-program__side-item Дополнительные материалы для самостоятельного углубленного изучения по вашему желанию
-        .course-program__list
-          .course-program__item
-            .course-program__item-content
-              .course-program__img
-                picture
-                  source(srcset="./img/course-program01.webp" type="image/webp")
-                  img(src="./img/course-program01.png" alt="img" width="90")
-              .course-program__info
-                .course-program__title Коронавирус это заговор, случайность или замысел Природы? Куда нас ведут?
-                .course-program__txt.
-                  Чем занимается наука каббала? Откуда каббалисты знают о замысле Творения? Из каких двух сил состоит все мироздание? Зачем нужен наш мир?
-          .course-program__item
-            .course-program__item-content
-              .course-program__img
-                picture
-                  source(srcset="./img/course-program02.webp" type="image/webp")
-                  img(src="./img/course-program02.png" alt="img" width="90")
-              .course-program__info
-                .course-program__title Что общего между мировым кризисом сегодня и кризисом Вавилонской империи?
-                .course-program__txt.
-                  Авраам и Нимрод - два выхода из кризиса. Какое решение предложил Авраам в Вавилоне и почему сегодня оно даже более актуально? Причины раскрытия науки каббала в наши дни. Как работает методика каббалы для решения любых проблем?
-          .course-program__item
-            .course-program__item-content
-              .course-program__img
-                picture
-                  source(srcset="./img/course-program03.webp" type="image/webp")
-                  img(src="./img/course-program03.png" alt="img" width="90")
-              .course-program__info
-                .course-program__title Есть ли действительно какая-то миссия у народа Израиля?
-                .course-program__txt.
-                  История каббалы, человечества и как все это связано с народом Израиля? Скрытые причины антисемитизма. Антисемитизм - закон природы?!
-          .course-program__item
-            .course-program__item-content
-              .course-program__img
-                picture
-                  source(srcset="./img/course-program04.webp" type="image/webp")
-                  img(src="./img/course-program04.png" alt="img" width="90")
-              .course-program__info
-                .course-program__title Почему все выходит из под контроля? Экология, эпидемии, экономика, террор, социальные протесты...
-                .course-program__txt.
-                  Почему попытки правительств, организаций, ученых изменить что-либо не работают? Есть ли у человечества и каждого из нас свобода выбора? Если да, то в чем?
-          .course-program__item
-            .course-program__item-content
-              .course-program__img
-                picture
-                  source(srcset="./img/course-program05.webp" type="image/webp")
-                  img(src="./img/course-program05.png" alt="img" width="90")
-              .course-program__info
-                .course-program__title Мир меняется с огромной скоростью. Есть ли путь назад или нам нужно подстраиваться под новые условия?
-                .course-program__txt.
-                  Какие специальности будут востребованы? Что будет с безработными? Как изменится экономика, развлечения, туризм, образование? Как найти свое место в новом мире и быть успешным, счастливым человеком?
+        .course-program__content
+          .course-program__side
+            .course-program__side-list-title Программа курса
+            .course-program__side-list
+              .course-program__side-item 5 интерактивных онлайн уроков
+              .course-program__side-item Личный куратор курса
+              .course-program__side-item Закрытая вотсап группа для участников курса
+              .course-program__side-item Ответы на все ваши вопросы от лучших преподавателей Международной академии каббалы
+              .course-program__side-item Техническая поддержка - быстрая помощь по любому тех. вопросу
+              .course-program__side-item Запись всех уроков
+              .course-program__side-item Дополнительные материалы для самостоятельного углубленного изучения по вашему желанию
+          .course-program__content-inner
+            .course-program__list
+              .course-program__item
+                .course-program__item-content
+                  .course-program__item-img
+                    picture
+                      source(srcset="./img/course-program01.webp" type="image/webp")
+                      img(src="./img/course-program01.png" alt="img" width="90")
+                  .course-program__item-info
+                    .course-program__item-title Коронавирус это заговор, случайность или замысел Природы? Куда нас ведут?
+                    .course-program__item-txt.
+                      Чем занимается наука каббала? Откуда каббалисты знают о замысле Творения? Из каких двух сил состоит все мироздание? Зачем нужен наш мир?
+              .course-program__item
+                .course-program__item-content
+                  .course-program__item-img
+                    picture
+                      source(srcset="./img/course-program02.webp" type="image/webp")
+                      img(src="./img/course-program02.png" alt="img" width="90")
+                  .course-program__item-info
+                    .course-program__item-title Что общего между мировым кризисом сегодня и кризисом Вавилонской империи?
+                    .course-program__item-txt.
+                      Авраам и Нимрод - два выхода из кризиса. Какое решение предложил Авраам в Вавилоне и почему сегодня оно даже более актуально? Причины раскрытия науки каббала в наши дни. Как работает методика каббалы для решения любых проблем?
+              .course-program__item
+                .course-program__item-content
+                  .course-program__item-img
+                    picture
+                      source(srcset="./img/course-program03.webp" type="image/webp")
+                      img(src="./img/course-program03.png" alt="img" width="90")
+                  .course-program__item-info
+                    .course-program__item-title Есть ли действительно какая-то миссия у народа Израиля?
+                    .course-program__item-txt.
+                      История каббалы, человечества и как все это связано с народом Израиля? Скрытые причины антисемитизма. Антисемитизм - закон природы?!
+              .course-program__item
+                .course-program__item-content
+                  .course-program__item-img
+                    picture
+                      source(srcset="./img/course-program04.webp" type="image/webp")
+                      img(src="./img/course-program04.png" alt="img" width="90")
+                  .course-program__item-info
+                    .course-program__item-title Почему все выходит из под контроля? Экология, эпидемии, экономика, террор, социальные протесты...
+                    .course-program__item-txt.
+                      Почему попытки правительств, организаций, ученых изменить что-либо не работают? Есть ли у человечества и каждого из нас свобода выбора? Если да, то в чем?
+              .course-program__item
+                .course-program__item-content
+                  .course-program__item-img
+                    picture
+                      source(srcset="./img/course-program05.webp" type="image/webp")
+                      img(src="./img/course-program05.png" alt="img" width="90")
+                  .course-program__item-info
+                    .course-program__item-title Мир меняется с огромной скоростью. Есть ли путь назад или нам нужно подстраиваться под новые условия?
+                    .course-program__item-txt.
+                      Какие специальности будут востребованы? Что будет с безработными? Как изменится экономика, развлечения, туризм, образование? Как найти свое место в новом мире и быть успешным, счастливым человеком?
         .course-program__btn
           a(href="#").course-program__btn-i.site-btn Мне интересно!
 
@@ -307,47 +311,53 @@ block content
           | ГОВОРЯТ
         .say__content
           .say__video
-            iframe(style="width:100%; max-width: 560px; height: 315px;" src="https://www.youtube.com/embed/i6Q40TDujgE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="")
-          .say__review
-            .say__review-title Отзывы участников
-            .say__review-txt.
-              Обучение под руководством лучших преподавателей Международной Академии Курс формирует понимание основных законов мироздания для  управления судьбой и своей повседневной жизнью
-      .say__slider.say-slider-js
-        .say__item
-          .say__item-img
-            picture
-              source(srcset="./img/o1.webp" type="image/webp")
-              img(src="./img/o1.png" alt="img" width="112")
-          .say__item-info
-            .say__item-name Наташа
-            .say__item-txt.
-              Никогда не знаешь, что с тобой произойдет в следующий момент. Однажды, в интернете, я увидела рекламу курса по каббале. Что я знала о каббале? Что это крутая мистика, красные нитки и прочее! И вот я на уроке в Тель-Авиве. Собралось много народу. Лектор начал говорить и что-то особенное появилось в воздухе, как облако, которое окутало меня до конца урока. Чем больше он говорил, тем больше возникало вопросов. С тех пор нахожу ответы на свои вопросы в этой науке…
-        .say__item
-          .say__item-img
-            picture
-              source(srcset="./img/o2.webp" type="image/webp")
-              img(src="./img/o2.png" alt="img" width="112")
-          .say__item-info
-            .say__item-name Заза
-            .say__item-txt.
-              2014 год. Во время операции пришло осознание, что наш физический мир не истинный, а только декорации. Потом несколько лет поиска ответа на вопрос. И вот когда ты просто ждешь, когда на этот чистый лист начнут ложиться буквы, появляется человек, который дает ссылку на интервью с каббалистом Михаэлем Лайтманом. Щелчок…, замыкание…, и вот я дома))) Мне повезло, я отправился учиться сразу на курс Международной академии каббалы в Хайфе.
-        .say__item
-          .say__item-img
-            picture
-              source(srcset="./img/o3.webp" type="image/webp")
-              img(src="./img/o3.png" alt="img" width="112")
-          .say__item-info
-            .say__item-name Жанна
-            .say__item-txt.
-              Попала на первый урок курса случайно. Ничего от него не ждала. Но спустя полтора часа я поняла, что эта древняя наука может изменить мою жизнь. Теперь я точно знаю, кем я хочу быть и что мне нужно делать, чтобы стать счастливой. Постоянно открываю что-то новое про себя и мир вокруг.
-          .say__item-img
-            picture
-              source(srcset="./img/o4.webp" type="image/webp")
-              img(src="./img/o5.png" alt="img" width="112")
-          .say__item-info
-            .say__item-name Сергей
-            .say__item-txt.
-              Меня давно интересовали вопросы мироздания и проявления этих процессов в нашей жизни, тема управления своей судьбой. Ответы я нашел в каббале.
+            iframe(style="width:100%; max-width: 560px; height: 315px;" data-blazy="https://www.youtube.com/embed/i6Q40TDujgE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="").b-lazy
+            .say__review
+              .say__review-title Отзывы участников
+              .say__review-txt.
+                Обучение под руководством лучших преподавателей Международной Академии Курс формирует понимание основных законов мироздания для  управления судьбой и своей повседневной жизнью
+          .say__slider
+            .say__list.say-slider-js
+              .say__item
+                .say__item-content
+                  .say__item-img
+                    picture
+                      source(srcset="./img/o1.webp" type="image/webp")
+                      img(src="./img/o1.png" alt="img" width="112" height="112")
+                  .say__item-info
+                    .say__item-name Наташа
+                    .say__item-txt.
+                      Никогда не знаешь, что с тобой произойдет в следующий момент. Однажды, в интернете, я увидела рекламу курса по каббале. Что я знала о каббале? Что это крутая мистика, красные нитки и прочее! И вот я на уроке в Тель-Авиве. Собралось много народу. Лектор начал говорить и что-то особенное появилось в воздухе, как облако, которое окутало меня до конца урока. Чем больше он говорил, тем больше возникало вопросов. С тех пор нахожу ответы на свои вопросы в этой науке…
+              .say__item
+                .say__item-content
+                  .say__item-img
+                    picture
+                      source(srcset="./img/o2.webp" type="image/webp")
+                      img(src="./img/o2.png" alt="img" width="112" height="112")
+                  .say__item-info
+                    .say__item-name Заза
+                    .say__item-txt.
+                      2014 год. Во время операции пришло осознание, что наш физический мир не истинный, а только декорации. Потом несколько лет поиска ответа на вопрос. И вот когда ты просто ждешь, когда на этот чистый лист начнут ложиться буквы, появляется человек, который дает ссылку на интервью с каббалистом Михаэлем Лайтманом. Щелчок…, замыкание…, и вот я дома))) Мне повезло, я отправился учиться сразу на курс Международной академии каббалы в Хайфе.
+              .say__item
+                .say__item-content
+                  .say__item-img
+                    picture
+                      source(srcset="./img/o3.webp" type="image/webp")
+                      img(src="./img/o3.png" alt="img" width="112" height="112")
+                  .say__item-info
+                    .say__item-name Жанна
+                    .say__item-txt.
+                      Попала на первый урок курса случайно. Ничего от него не ждала. Но спустя полтора часа я поняла, что эта древняя наука может изменить мою жизнь. Теперь я точно знаю, кем я хочу быть и что мне нужно делать, чтобы стать счастливой. Постоянно открываю что-то новое про себя и мир вокруг.
+              .say__item
+                .say__item-content
+                  .say__item-img
+                    picture
+                      source(srcset="./img/o4.webp" type="image/webp")
+                      img(src="./img/o4.png" alt="img" width="112" height="112")
+                  .say__item-info
+                    .say__item-name Сергей
+                    .say__item-txt.
+                      Меня давно интересовали вопросы мироздания и проявления этих процессов в нашей жизни, тема управления своей судьбой. Ответы я нашел в каббале.
 
     .facts
       .facts__inner.site-container

@@ -64,12 +64,12 @@ gulp.task('js', () => {
 gulp.task('css-libs', () => {
   return gulp.src([
       'node_modules/normalize.css/normalize.css',
-      // 'node_modules/slick-carousel/slick/slick.css',
+      'node_modules/slick-carousel/slick/slick.css',
       // 'node_modules/bootstrap/dist/css/bootstrap.css',
       // 'node_modules/bootstrap-select/dist/css/bootstrap-select.css',
-      'node_modules/magnific-popup/dist/magnific-popup.css',
-      'node_modules/jquery-ui-dist/jquery-ui.min.css',
-      'node_modules/owl.carousel/dist/assets/owl.carousel.css',
+      // 'node_modules/magnific-popup/dist/magnific-popup.css',
+      // 'node_modules/jquery-ui-dist/jquery-ui.min.css',
+      // 'node_modules/owl.carousel/dist/assets/owl.carousel.css',
   ])
     .pipe(gulp.dest('dist/css/libs/'))
     .pipe(concat('libs.css'))
@@ -85,11 +85,11 @@ gulp.task('js-libs', () => {
       // 'node_modules/bootstrap/dist/js/bootstrap.js',
       // 'node_modules/bootstrap-select/dist/js/bootstrap-select.js',
       'node_modules/blazy/blazy.min.js',
-      'node_modules/inputmask/dist/jquery.inputmask.js',
-      // 'node_modules/slick-carousel/slick/slick.js',
-      'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
-      'node_modules/jquery-ui-dist/jquery-ui.min.js',
-      'node_modules/owl.carousel/dist/owl.carousel.js',
+      // 'node_modules/inputmask/dist/jquery.inputmask.js',
+      'node_modules/slick-carousel/slick/slick.js',
+      // 'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
+      // 'node_modules/jquery-ui-dist/jquery-ui.min.js',
+      // 'node_modules/owl.carousel/dist/owl.carousel.js',
     ])
     .pipe(gulp.dest('dist/js/libs/'))
     .pipe(concat('libs.js'))
