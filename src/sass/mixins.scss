@@ -23,6 +23,13 @@
   @media (min-width: 551px) { @content; }
 }
 
+@mixin for-600 {
+  @media (max-width: 600px) { @content; }
+}
+@mixin from-600 {
+  @media (min-width: 601px) { @content; }
+}
+
 @mixin for-768 {
   @media (max-width: 800px) { @content; }
 }

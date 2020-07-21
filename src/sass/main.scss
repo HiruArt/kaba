@@ -101,6 +101,19 @@ a{
   }
 }
 
+
+.hide-desktop{
+  @media (min-width: 600px) {
+    display: none !important;
+  }
+}
+
+.hide-mobile{
+  @media (max-width: 600px) {
+    display: none !important;
+  }
+}
+
 input{
   transition: 0.3s;
 
@@ -247,6 +260,10 @@ input{
   display: flex;
   align-items: flex-end;
 
+  @include for-992{
+    height: 78px;
+  }
+
   &__inner{
     display: flex;
     justify-content: space-between;
@@ -261,6 +278,12 @@ input{
 
   &__logo-i{
     display: flex;
+
+    svg{
+      @include for-992{
+        width: 113px;
+      }
+    }
   }
 
   &__phone{
@@ -269,6 +292,12 @@ input{
 
     svg{
       margin-right: 18px;
+
+      @include for-992{
+        width: 37px;
+        margin-right: 8px;
+        margin-top: -2px
+      }
     }
 
   }
@@ -279,6 +308,10 @@ input{
     line-height: 130%;
     font-family: 'Montserrat';
     transition: .3s all;
+
+    @include for-992{
+      font-size: 22px;
+    }
   }
 
   &__phone:hover &__phone-i{
@@ -290,10 +323,23 @@ input{
 .top{
   background-image: url("../img/gradient-bg01.svg");
   background-position: left top;
-  background-size: 100%, 728px;
+  background-size: auto 728px;
   background-repeat: no-repeat;
   padding-top: 120px;
   position: relative;
+
+  @include for-1200{
+    background-size: auto 650px;
+  }
+
+  @include for-992{
+    padding-top: 78px;
+    background-size: cover;
+  }
+
+  @media (max-width: 600px){
+    background: none;
+  }
 
   &__big-img{
     position: absolute;
@@ -305,17 +351,45 @@ input{
     background-repeat: no-repeat;
     background-position: calc(50% - 130px) 50px;
     z-index: 1;
+
+    @include for-1200{
+      background-size: cover;
+    }
+
+    @include for-992{
+      background-size: cover;
+      transform: none;
+      top: 0;
+      left: -221px;
+      background-position-x: 0;
+      width: 1220px;
+    }
+
+    @include for-600{
+      top: 0;
+      background-position: left top;
+      left: 0;
+      background-size: auto;
+    }
   }
 
   &__inner{
     padding-top: 100px;
-    padding-bottom: 35px;
+    padding-bottom: 25px;
     position: relative;
     z-index: 2;
+
+    @include for-992{
+      padding-top: 33px;
+    }
   }
 
   &__special{
     margin-bottom: 50px;
+
+    @include for-768{
+      display: none;
+    }
   }
 
   &__special-i{
@@ -340,9 +414,9 @@ input{
     transition: .3s all;
   }
 
-  &__special-i:hover &__special-txt{
-    color: white;
-  }
+  //&__special-i:hover &__special-txt{
+  //  color: white;
+  //}
 
   &__subtitle{
     font-weight: 600;
@@ -351,6 +425,11 @@ input{
     letter-spacing: -0.05em;
     color: #FFFFFF;
     margin-bottom: 10px;
+
+    @include for-768{
+      font-size: 26px;
+      line-height: 90%;
+    }
   }
 
   &__title{
@@ -361,6 +440,16 @@ input{
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: 50px;
+
+    @include for-768{
+      font-size: 60px;
+      line-height: 100%;
+      margin-bottom: 255px;
+    }
+
+    @include for-600{
+      margin-bottom: 15px;
+    }
   }
 
   &__hexagon{
@@ -368,6 +457,17 @@ input{
     padding: 136px 56px 97px;
     max-width: 392px;
     width: 100%;
+
+    @include for-1100{
+      padding: 118px 110px 65px 15px;
+    }
+
+    @include for-992 {
+      padding: 100px 15px 65px 15px;
+      position: relative;
+      top: 35px;
+      left: 24px;
+    }
   }
 
   &__btn-down{
@@ -382,6 +482,15 @@ input{
     left: 50px;
     top: 35px;
     transition: .3s all;
+
+    @include for-992{
+      left: 0;
+      top: 0;
+    }
+
+    @include for-768{
+      top: 20px;
+    }
 
     svg{
       transition: .3s all;
@@ -401,6 +510,10 @@ input{
     font-size: 16px;
     line-height: 180%;
     color: #000000;
+
+    @include for-992{
+      max-width: 261px;
+    }
   }
 }
 
