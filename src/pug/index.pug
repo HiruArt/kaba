@@ -360,6 +360,10 @@ block content
                       Меня давно интересовали вопросы мироздания и проявления этих процессов в нашей жизни, тема управления своей судьбой. Ответы я нашел в каббале.
 
     .facts
+      .facts__wrap-img.b-lazy.webp-img(data-webp="./img/main-bg.webp"
+      data-webp-mobile="./img/main-bg.webp"
+      data-img="./img/main-bg.png"
+      data-img-mobile="./img/main-bg.png")
       .facts__inner.site-container
         .facts__title
           img(src="./img/logo-title.svg" alt="ico" width="224")
@@ -383,6 +387,7 @@ block content
           .facts__item
             .facts__txt.
               Лекторы с международным стажем преподавания более 25 лет.
+
     .founder
       .founder__inner.site-container
         .founder__img
@@ -390,7 +395,11 @@ block content
             source(srcset="./img/quote-img.webp" type="image/webp")
             img(src="./img/quote-img.png" alt="img" width="144")
         .founder__content
-          .founder__name
+          .founder__mob-img
+            picture
+              source(srcset="./img/quote-img.webp" type="image/webp")
+              img(src="./img/quote-img.png" alt="img" width="144")
+          .founder__name Михаэль Лайтман
           .founder__rank.
             Основатель и руководитель <br>Международной академии каббалы
           .founder__list
@@ -400,14 +409,20 @@ block content
             .founder__item автор более 70 книг по каббале, переведенных на более 20 языков мира
             .founder__item Doctor of Philosophy (философия PhD), биокибернетика MSc
             .founder__item из уроков Михаэля Лайтмана создан крупнейший в мире бесплатный мультиязычный архив уроков по каббале
+
+
     .last
+      .last__wrap-img.b-lazy.webp-img(data-webp="./img/last-bg.webp"
+      data-webp-mobile="./img/last-bg.webp"
+      data-img="./img/last-bg.png"
+      data-img-mobile="./img/last-bg.png")
       .last__inner.site-container
         .last__caption
-          include ../img/ico/arrow-down.svg
-        | Первый онлайн-урок
+          include ../img/man.svg
+          | ВПЕРВЫЕ В ИЗРАИЛЕ: ОНЛАЙН-КУРС
         .last__title
           span Каббала: Как все устроено
-        | на самом деле?
+          | на самом деле?
         .last__discount
           .last__discount-txt.
            Скидка 30% для Вас- новых студентов Международной академии каббалы:
@@ -417,9 +432,11 @@ block content
             span 897
               include ../img/ico/p.svg
         .last__bonus
-          .last__bonus-title
+          .last__bonus-title Бонусы:
           ol.last__bonus-list
-            li
+            li Учебник “Каббала для начинающих”
+            li Роман-притча  “Битва Авраама”
+            li Бонусный урок: Вопросы и Ответы
           .last__bonus-books
             picture
               source(srcset="./img/book1.webp" type="image/webp")
@@ -433,10 +450,7 @@ block content
               source(srcset="./img/join-now-img.webp" type="image/webp")
               img(src="./img/join-now-img.png" alt="img" width="125")
           .last__info
-            .last__caption
-
-              | Первый онлайн-урок
-            .last__title
+            .last__info-title
               include ../img/ico/arrow-down.svg
               | ЗАПИСАТЬСЯ НА КУРС сейчас:
             .last__form-i
