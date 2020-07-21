@@ -151,6 +151,9 @@ input{
   font-size: 60px;
   line-height: 110%;
   color: #A031BB;
+  z-index: 2;
+  position: relative;
+  width: max-content;
 
   span{
     display: flex;
@@ -612,6 +615,15 @@ input{
 
   &__title{
 
+    &:before{
+      content: '';
+      width: 810px;
+      height: 18px;
+      background: url("../img/purple-line-title.svg") right center/100% no-repeat;
+      position: absolute;
+      bottom: 3px;
+      right: -100px;
+    }
   }
 
   &__list{
@@ -626,10 +638,13 @@ input{
     margin-bottom: 55px;
 
    &--empty{
+     margin-bottom: 0;
+   }
 
+    &:nth-child(odd){
+      transform: translateY(-20px);
     }
   }
-
 
   &__item-content{
     display: flex;
@@ -688,6 +703,59 @@ input{
   }
 
   &__get-img-vector{
+
+  }
+
+}
+
+.join-now{
+  background-image: url("../img/gradient-bg01.svg");
+  background-position: left top;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__inner{
+    padding-top: 150px;
+    padding-bottom: 155px;
+  }
+
+  &__img{
+
+  }
+
+  &__info{
+
+  }
+
+  &__caption{
+
+  }
+
+  &__title{
+
+  }
+
+  &__time{
+
+  }
+
+  &__time-first{
+
+  }
+
+  &__time-date{
+
+  }
+
+  &__time-day{
+
+  }
+
+  &__time-hour{
+
+  }
+
+  &__btn{
 
   }
 
