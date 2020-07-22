@@ -1778,6 +1778,44 @@ input{
     padding-top: 135px;
   }
 
+  &__img{
+    position: relative;
+    height: 100%;
+
+    &:before{
+      content: '';
+      background: url("../img/white-line.svg") right center no-repeat;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: calc(100% - 10px);
+      height: 18px;
+      width: 100vh;
+      z-index: 3;
+
+      @include for-992{
+        display: none;
+      }
+    }
+
+    //&:after{
+    //  content: '';
+    //  height: 32px;
+    //  width: 32px;
+    //  background: white;
+    //  z-index: 2;
+    //  border-radius: 50%;
+    //  top: 50%;
+    //  transform: translateY(-50%);
+    //  right: calc(100% - 18px);
+    //  position: absolute;
+    //
+    //  @include for-992{
+    //    display: none;
+    //  }
+    //}
+  }
+
   &__caption{
     display: flex;
     align-items: center;

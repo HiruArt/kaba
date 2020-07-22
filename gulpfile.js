@@ -85,7 +85,7 @@ gulp.task('js-libs', () => {
       // 'node_modules/bootstrap/dist/js/bootstrap.js',
       // 'node_modules/bootstrap-select/dist/js/bootstrap-select.js',
       'node_modules/blazy/blazy.min.js',
-      // 'node_modules/inputmask/dist/jquery.inputmask.js',
+      'node_modules/inputmask/dist/jquery.inputmask.js',
       'node_modules/slick-carousel/slick/slick.js',
       // 'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
       // 'node_modules/jquery-ui-dist/jquery-ui.min.js',

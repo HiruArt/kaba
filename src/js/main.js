@@ -47,6 +47,14 @@ $(document).ready(function () {
       } else {
         $(this).parent().removeClass('check');
       }
+
+      if($(this).hasClass('phone')){
+        if($(this).val().indexOf('_') === -1){
+          $(this).parent().addClass('check');
+        } else {
+          $(this).parent().removeClass('check');
+        }
+      }
     })
   });
 
@@ -154,7 +162,7 @@ $(document).ready(function () {
     // verticalSwiping: true,
     // adaptiveHeight: true,
   });
-
+  $('.phone').inputmask("+7 (999) 999-99-99");
 });
 
 
