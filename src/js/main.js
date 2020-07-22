@@ -53,7 +53,7 @@ $(document).ready(function () {
   // checking browser for WEBP
   hasWebP().then(function () {
 
-    if($(window).width() > 768) {
+    if($(window).width() > 800) {
       $('.webp-img').each(function () {
         var webp = $(this).data('webp');
         $(this).attr('data-blazy', webp);
@@ -70,7 +70,7 @@ $(document).ready(function () {
     bLazy.revalidate();
 
   }, function () {
-    if($(window).width() > 768) {
+    if($(window).width() > 800) {
       $('.webp-img').each(function () {
         var img = $(this).data('img');
         $(this).attr('data-blazy', img);
