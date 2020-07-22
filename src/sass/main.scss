@@ -2109,3 +2109,18 @@ input{
   }
 
 }
+
+.check{
+  position: relative;
+
+  &:after{
+    content: '';
+    display: block;
+    width: 19px;
+    height: 19px;
+    background: url("../img/circle-check.svg") center center no-repeat;
+    position: absolute;
+    top: -8px;
+    right: 23px;
+  }
+}

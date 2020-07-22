@@ -40,6 +40,16 @@ $(document).ready(function () {
     src: 'data-blazy' // Default is data-src
   });
 
+  $('form input').each(function () {
+    $(this).keyup(function () {
+      if($(this).val().length > 4){
+        $(this).parent().addClass('check');
+      } else {
+        $(this).parent().removeClass('check');
+      }
+    })
+  });
+
   // checking browser for WEBP
   hasWebP().then(function () {
 
